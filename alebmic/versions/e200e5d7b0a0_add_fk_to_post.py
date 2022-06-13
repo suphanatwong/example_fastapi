@@ -21,7 +21,7 @@ def upgrade():
     op.add_column('posts',sa.Column('owner_id', sa.Integer(),nullable =False))
     op.create_foreign_key('post_users_fk', source_table="posts", referent_table="users",
     local_cols=[
-                    'owner_id'],remote_cols=['id'],ondelete="CASCADE")
+                     'owner_id'],remote_cols=['id'],ondelete="CASCADE")
 
     pass
 
