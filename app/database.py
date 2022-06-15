@@ -27,7 +27,11 @@ def get_db():
     finally: 
         db.close()
 
+<<<<<<< HEAD
  while True: 
+=======
+# while True: 
+>>>>>>> 22a8fd8f44ed992339d7930785e594b33efef772
 
 #     try:
 #         conn=psycopg2.connect(host ='localhost', database = 'fastapi', user = 'postgres', 
@@ -38,4 +42,8 @@ def get_db():
 #     except Exception as error:
 #         print("Connecting to DB failed")
 #         print("Error: ", error)
+<<<<<<< HEAD
 #         time.sleep(2)
+=======
+#         time.sleep(2)
+>>>>>>> 22a8fd8f44ed992339d7930785e594b33efef772
