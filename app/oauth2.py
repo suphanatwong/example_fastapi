@@ -1,5 +1,5 @@
 from telnetlib import STATUS
-from tkinter.messagebox import RETRY
+#from tkinter.messagebox import RETRY
 from jose import JWSError, jwt
 from datetime import datetime, timedelta
 from rsa import verify
@@ -14,11 +14,11 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl='login')
 
 SECRET_KEY = settings.secret_key
 ALGORITHM = settings.algorithm
-ACCESS_TOKE_EXPIRE_MIMUTE = settings.access_token_expire_minutes 
+ACCESS_TOKE_EXPIRE_MIMUTES = settings.access_token_expire_minutes 
 
 def create_access_token(data: dict):
     to_encode = data.copy()
-    expire = datetime.utcnow() + timedelta(minutes = ACCESS_TOKE_EXPIRE_MIMUTE)
+    expire = datetime.utcnow() + timedelta(minutes = ACCESS_TOKE_EXPIRE_MIMUTES)
     to_encode.update({"exp": expire})
 
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
